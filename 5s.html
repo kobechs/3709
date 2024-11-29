@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/5s.css">
+</head>
+<body>
+
+    <h1><span class="highlight" id="changer">5秒</span>を覚えろ<span class="oni" id="changer">ガーガータイム</span></h1>
+    <time id="count">00.00</time>
+
+    <div id="score">スコア: 0</div>
+
+    <div class="brain" id="imagine">
+        <p>ガーガーがやって来たせいで時間を確認することが出来ない！時の流れを想像して５秒で止めよう！</p>
+    </div>
+  <!-- 新しいボタンを追加 -->
+    <button class="show-buttons-button" onclick="showControlButtons()" id="showButtons">操作ボタンを表示</button>
+    
+     <button class="top" id="menu" onclick="goTotop()">ホームに戻る</button><!--ホームに戻る--!>
+
+    <!-- スタート、ストップ、リセットボタン（最初は非表示）-->
+    <div id="controlButtons" style="display: none;">
+    <button class="start-button" onclick="startTimer();" id="start">スタート！(s)</button>
+    <button class="stop-button" onclick="stopTimer();" id="stop">ストップ！(t)</button>
+    <button class="reset-button" onclick="resetTimer();" id="reset">リセット！(r)</button>
+    <button class="back-button" onclick="hideControlButtons()" id="backBtn">戻る</button>
+    </div>
+    </div>
+
+    <button class="help-button" id="helpBtn">遊び方(p)</button>
+
+    <!-- モーダル -->
+    <div class="modal" id="modal" style="display:none;">
+        <div class="modal-content">
+            <!-- ページ1 -->
+            <div id="page1">
+                <h2> ページ1-「遊び方」</h2>
+                <p>
+                1. 「スタート!(s)」を押してタイマーを開始!<br>
+                2. 5秒経過したと思ったら「ストップ!(t)」<br>
+                3. 「リセット!(r)」でタイマーをリセット!<br>
+                4.クリックまたは指定のキーで操作可能です。<br></p>
+                <div id="five"><p>5.スコアの計算の仕方</p></div>
+                <p>(1)05.00丁度で止めれた場合500点追加。連続でb回止めれた場合、500点と1500(b-1)点のボーナス追加。</p>
+                <p>(2)04.96＜a＜05.00、05.00＜a＜05.04の場合200点追加。連続でc回止めれた場合、200c追加。</p>
+                <p>(3)04.94＜a＜04.97、05.03＜a＜05.06の場合100点追加。連続でd回止めれた場合、100d追加。</p>
+                <p>(4)04.91＜a＜04.95、05.05＜a＜05.09の場合40%の確率で100点減点、30%の確率で50点減点。20%の確率で50点追加。10%の確率で100点追加。</p>
+                <p>(5)04.89＜a＜04.92、05.08＜a＜05.11の場合200点減点。連続でe回止まってしまった場合、200e減点。</p>
+                <p>(5)範囲外のタイムの場合はゲームオーバーです。</p>
+                </p>※スマートフォンの省電力モードの使用時にタイマーの遅延が発生する場合があります。<br></p>
+                <p>「<span class="hide">5秒</span>」を押すと???......</p>
+                <button class="next" id="nextPageBtn">次へ</button>
+            </div>
+            <!-- ページ2 -->
+            <div id="page2" style="display: none;">
+                <h2>ページ2-「５秒伝説」</h2>
+                <p>紀元前5555年とある村におじいさんとおばあさんが平和に暮らしていた。おじいさんは山へ芝刈りにおばあさんは川へ洗濯をしに行くと思ったら自販機の下をあさりに行きました。おばあさんが自販機の下をあさっていると奥のほうからどんぶらこどんぶらこと5円玉が転がってきました。おばあさんは喜んで家に持ち帰り、5円玉の穴をのぞいてみると、小さな赤ん坊が現れました。２人は赤ん坊に「五縁多呂」と名付けました。しかし、ガーガーがすさまじいエンジン音と共にバイクで荒らしに来ました。ガーガーは時間の姿を消し去る能力を持っていた。村の住民は時間を確認することが出来ずに困っていた。だが、しかし、でありながら、五縁多呂がファイブセーバーを使って、ガーガーを丁度５秒で倒して村の住民は時間を確認できるようになってとても喜んでいた。しかし、気付いた頃には五縁多呂は村から消えていた。<span class="l">５秒伝説</span>はここから始まった。</p>
+                <button class="prev" id="prevPageBtn">戻る</button>
+                <button class="close" id="closeBtn">閉じる(p/esc)</button>
+            </div>
+        </div>
+    </div>
+    <div class="fun" id="funMessage">
+        <p>※遊び方のページを読むと5倍楽しめます</p>
+    </div>
+
+
+
+    <script src="5s.js"></script>
+</body>
+</html>

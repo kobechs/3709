@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="gaa"><img src="gaagaa.jpg" alt="gaagaa" style="width:60%;height:auto;"></div>
+    <button class="go" id="first" onclick="goTo5sPage()"><span class="btn-custom01-front">5秒を覚えろ</span></button>
+    <button class="go" id="showRanking" onclick="showRanking()"><span class="btn-custom01-front">ランキング</span></button>
+    <button class="go" id="showCredits" onclick="goToCredits()"><span class="btn-custom01-front">クレジット</span></button>   <!--効果音：Springin’ Sound Stock-->
+
+<div id="rankingModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeRankingModal()">&times;</span>
+    <h2>スコアランキング</h2>
+    <div id="rankingContent"></div>
+  </div>
+</div>
+
+        
+     <script src="script.js"></script>
+  </body>
+</html>

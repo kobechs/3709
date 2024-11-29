@@ -1,0 +1,39 @@
+.slide {
+    height: 100vh;
+   }
+   .slide1 {
+     background-color: #fff; 
+     background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+     linear-gradient(#eee .1em, transparent .1em);
+     background-size: 100% 1.2em;
+   }
+   
+   .fix-it {
+      background-attachment: fixed;
+     
+   }
+   h1 {
+     display: block;
+     margin: auto;
+     padding: 20%;
+     font-size: 40px;
+     color: black;
+     text-align: center;
+   }
+   .sounds{
+       font-size: 20px;
+       color: black;
+       text-align: center;
+   }
+   #backBtn{
+       border-radius: 15px;
+       background-color: #abced4;
+       width: 5em;
+       height:3em;
+       font-size: 20px;
+   }
+   #backBtn:hover{
+     opacity: 0.7;
+     color: black;
+   }
+   
